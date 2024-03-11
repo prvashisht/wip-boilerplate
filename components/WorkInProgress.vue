@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col min-h-screen justify-between text-gray-500">
-    <header class="flex flex-col items-center p-4 md:p-8 text-center">
+    <header class="flex flex-col gap-2 md:gap-4 items-center p-4 md:p-8 text-center">
       <h1 class="font-extrabold text-6xl md:text-8xl text-gray-600 shadowed">{{ websiteName }}</h1>
       <h2 class="font-bold text-xl md:text-3xl text-gray-400">Website under construction</h2>
     </header>

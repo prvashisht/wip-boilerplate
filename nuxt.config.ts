@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
-      websites: JSON.parse(process.env.WEBSITES || '{}'),
+      websites: JSON.parse(process.env.WEBSITES || '{}') as Record<string, string>,
     },
   },
 })
