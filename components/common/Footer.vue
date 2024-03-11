@@ -3,7 +3,10 @@
     <div>
       &copy; {{ new Date().getFullYear() }} {{ website.name }}
     </div>
-    <div class="hidden sm:block">|</div>
+    <div
+      v-if="website.phone || website.email || website.phonelink"
+      class="hidden sm:block"
+    >|</div>
     <div
       v-if="website.phone || website.email || website.phonelink"
     >
