@@ -1,6 +1,6 @@
 import { type WebsiteDetails } from "./types/websiteDetails";
 
-const defaultWebsite = {
+const defaultDomain = {
   name: "My Website",
   description: "Website under construction",
   phone: "",
@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     public: {
       websites: {
         ...JSON.parse(process.env.WEBSITES || '{}'),
-        "default": defaultWebsite,
+        defaultDomain,
       } as Record<string, WebsiteDetails>,
     },
   },

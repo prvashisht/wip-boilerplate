@@ -21,7 +21,7 @@ import { type WebsiteDetails } from '@/types/websiteDetails';
 // TODO: Move this to private runtime config
 const { websites }: { websites: Record<string, WebsiteDetails> } = useRuntimeConfig().public;
 const { hostname } = useRequestURL();
-const website = websites[hostname] || websites.default;
+const website = websites[hostname] || websites.defaultDomain;
 
 useHead({
   title: `${website.name} | Website under construction`,
