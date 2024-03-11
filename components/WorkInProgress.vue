@@ -9,6 +9,7 @@
       <BgSvg class="max-w-screen-sm" />
     </main>
 
+    <!-- TODO: Add phone number and other details if available -->
     <footer class="flex justify-center items-center p-2 text-sm md:text-base text-center bg-gray-100">
       &copy; {{ new Date().getFullYear() }} {{ website.name }}
     </footer>
@@ -17,18 +18,14 @@
 
 <script lang="ts" setup>
 import { type WebsiteDetails } from '@/types/websiteDetails';
-
-// TODO: Move this to private runtime config
-const { websites }: { websites: Record<string, WebsiteDetails> } = useRuntimeConfig().public;
-const { hostname } = useRequestURL();
-const website = websites[hostname] || websites.defaultDomain;
+const website = useState('website') as Ref<WebsiteDetails>;
 
 useHead({
-  title: `${website.name} | Website under construction`,
+  title: `${website.value.name} | Website under construction`,
   meta: [
     {
       name: 'description',
-      content: website.description || "Website under construction",
+      content: website.value.description,
     },
   ],
 });
