@@ -212,11 +212,6 @@
 
 <style>
 /* Styles */
-svg{
-  display: block;
-  margin: auto;
-}
-
 #clock{
   animation: clockHand 5s infinite linear;
   transform-box: fill-box;
